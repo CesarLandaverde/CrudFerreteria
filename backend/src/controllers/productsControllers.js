@@ -21,12 +21,12 @@ productsController.createProducts = async (req,res)=>{
 }
 //delete:
 productsController.deleteProducts= async (req,res)=>{
-    const deleteProduct = await productsModel.findByIdandDelete(req.params.id);
+    const deleteProduct = await productsModel.findByIdAndDelete(req.params.id);
     res.json({message:"Product Eliminado"})
 }
 //update:
 productsController.updateProducts = async(req,res)=>{
-    const updateProduct = await productsModel.findByIdandUpdate(req.params.id,
+    const updateProduct = await productsModel.findByIdAndUpdate(req.params.id,
         {name,description,price,stock},{new:true}
     );
     res.json({message:"Product Actualizado"})
