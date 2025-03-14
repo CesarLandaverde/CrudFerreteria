@@ -1,16 +1,16 @@
 import express from 'express';
 const router = express.Router();
 import reviewsControllers from '../controllers/reviewsControllers.js';
-import reviewsRoutes from '../controllers/reviewsControllers.js';
+
 
 
 router.route("/")
-.get(reviewsRoutes.getReviews)
-.post(reviewsRoutes.createReviews)
+.get(reviewsControllers.getReviews)
+.post(reviewsControllers.createReviews)
 
 router.route("/:id")
-.get(reviewsRoutes.getReview)
-.put(reviewsRoutes.updateReviews)
-.delete(reviewsRoutes.deleteReviews);
+.get(reviewsControllers.getReview)
+.put(reviewsControllers.updateReviews)
+.delete(reviewsControllers.deleteReviews);
 
 export default router;

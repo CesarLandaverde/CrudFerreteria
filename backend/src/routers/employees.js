@@ -1,15 +1,15 @@
 import express from "express";
 const router = express.Router();
-import employeesRoutes from '../controllers/employeesControllers.js';
+import employeesControllers from '../controllers/employeesControllers.js';
 
 router.route('/')
-.get(employeesRoutes.getEmployees)
-.post(employeesRoutes.createEmployees);
+.get(employeesControllers.getEmployees)
+.post(employeesControllers.createEmployees);
 
  router.route('/:id')
- .get(employeesRoutes.getEmployee)
- .put(employeesRoutes.updateEmployees)
- .delete(employeesRoutes.deleteEmployees);
+ .get(employeesControllers.getEmployee)
+ .put(employeesControllers.updateEmployees)
+ .delete(employeesControllers.deleteEmployees);
 
  export default router;
  

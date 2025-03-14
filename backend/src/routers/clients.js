@@ -1,15 +1,15 @@
 import express from "express";
 const router = express.Router();
-import clientsRoutes from "../controllers/clientsControllers.js";
+import clientsControllers from "../controllers/clientsControllers.js";
 
 
 router.route("/")
-.get(clientsRoutes.getClients)
-.post(clientsRoutes.postClients);
+.get(clientsControllers.getClients)
+.post(clientsControllers.postClients);
 
 router.route("/:id")
-.get(clientsRoutes.getClient)
-.put(clientsRoutes.putClients)
-.delete(clientsRoutes.deleteClients);
+.get(clientsControllers.getClient)
+.put(clientsControllers.putClients)
+.delete(clientsControllers.deleteClients);
 
  export default router;
