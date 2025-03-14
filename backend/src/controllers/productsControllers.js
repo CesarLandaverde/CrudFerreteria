@@ -26,6 +26,7 @@ productsController.deleteProducts= async (req,res)=>{
 }
 //update:
 productsController.updateProducts = async(req,res)=>{
+    
     const updateProduct = await productsModel.findByIdAndUpdate(req.params.id,
         {name,description,price,stock},{new:true}
     );
